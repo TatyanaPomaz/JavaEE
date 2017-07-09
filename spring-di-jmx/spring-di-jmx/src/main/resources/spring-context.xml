@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="userDAO" class="spring_di_test.dao.UserServiceDAO"/>
+    <bean name="userDAO1" class="spring_di_test.dao.UserServiceDAO"/>
+    <bean name="personDAO" class="spring_di_test.dao.UserServiceDAO"/>
+
+    <bean name="userService" class="spring_di_test.service.UserService">
+        <property name="personDAO" ref="userDAO"/>
+    </bean>
+
+    <bean name="userService1" class="spring_di_test.service.UserService">
+        <constructor-arg index="0" ref="userDAO"/>
+    </bean>
+
+    <!--<bean name="userService2" class="spring_di_test.service.UserService" autowire="byType"/>-->
+    <bean name="userService2" class="spring_di_test.service.UserService" autowire="byName"/>
+
+</beans>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+<div class="header"></div>
+<div class="leftArea">
+    <ul id="userList"></ul>
+</div>
+
+<div id="mainArea"></div>
+
+<script type="text/template" id="header">
+    <button class="new">New User</button>
+</script>
+
+<script type="text/template" id="user-list-item">
+    <li><a href='#users/<%=id %>'><%=name%></a></li>
+</script>
+
+<script type="text/template" id="user-details">
+
+    <div class="form-left-col">
+
+        <label>Id:</label>
+        <input id="userId" name="id" type="text" value="<%=id%>" disabled/>
+
+        <label>Age:</label>
+        <input type="text" id="name" name="name" value="<%=name%>" required/>
+
+        <label>Name:</label>
+        <input type="text" id="age" name="age" value="<%=age%>"/>
+
+        <button class="save">Save</button>
+        <button class="delete">Delete</button>
+
+    </div>
+
+</script>
+<script src="http://code.jquery.com/jquery-latest.js"/>
+<script src="js/lib/jquery-1.7.1.min.js"></script>
+<script src="js/lib/underscore-min.js"></script>
+<script src="js/lib/backbone-min.js"></script>
+<script src="js/app/main.js"></script>
+</body>
+</html>

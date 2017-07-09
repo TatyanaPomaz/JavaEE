@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <servlet>
+        <servlet-name>person_servlet</servlet-name>
+        <servlet-class>person_bl.PersonServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>person_servlet</servlet-name>
+        <url-pattern>/persons</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>exception-handler-servlet</servlet-name>
+        <servlet-class>person_bl.ExceptionHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>exception-handler-servlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>

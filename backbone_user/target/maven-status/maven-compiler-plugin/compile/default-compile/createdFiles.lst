@@ -1,0 +1,3 @@
+com\backbone\user\test\entity\User.class
+com\backbone\user\test\repository\UserRepository.class
+com\backbone\user\test\controller\UserController.class
